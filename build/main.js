@@ -317,7 +317,14 @@ function setCreativeElements() {
 
 // Size creative area per available total area so 2:3 aspect ratio creative content will not overflow the available screen space.
 // The parameter "data" will be populated only by the response from the custom scripts "creativeResize" event.  When calling this function from manually pass "null".  When accessing the "data" parameter make sure to do a check its existance prior to accessing.
+var attempt = 1;
+
 function sizeContentArea(data) {
+    
+    console.group("sizeContentArea");
+
+    console.log("data: " + attempt + "  -- ", data);
+    attempt++;
 	var adWrapper = document.getElementById("adWrapper");
 	var adWrappoerWidth = adWrapper.offsetWidth;
 
@@ -337,7 +344,9 @@ function sizeContentArea(data) {
 	var winW = (data && typeof data.sfGeomObj !== "undefined") ? data.sfGeomObj.win.w : window.innerWidth;
 	var winH = (data && typeof data.sfGeomObj !== "undefined") ? data.sfGeomObj.win.h : window.innerHeight;
 	var winO = window.orientation || null;
-	var determinedOrientation = (winH <= winW || winO === 90 || winO === -90) ? "land" : "port";
+    var determinedOrientation = (winH <= winW || winO === 90 || winO === -90) ? "land" : "port";
+    
+    console.log("device orientation: ", determinedOrientation);
 
 	var finalWidth;
 	var finalHeight;	// if creative content would overflow available display space reduce creative content area
@@ -348,9 +357,12 @@ function sizeContentArea(data) {
 	} else {
 		finalWidth = initialWidth;
 		finalHeight = initialHeight;
-	}
+    }
+    
+    console.log("final width: ", finalWidth);
 
-	// adContainer.style.width = finalWidth + "px";
+    // adContainer.style.width = finalWidth + "px";
+    console.log("adcontainer width: ", (determinedOrientation === "port" && creativeConfigObj.portraitFitStyle === "fullWidth") ? "100%" : finalWidth + "px");
 	adContainer.style.width = (determinedOrientation === "port" && creativeConfigObj.portraitFitStyle === "fullWidth") ? "100%" : finalWidth + "px" ;
 	document.getElementById("videoControlsContainer").style.width = finalWidth + "px";
 	adContainer.style.height = finalHeight + "px";
@@ -389,10 +401,10 @@ function setUpVideo(srcURL, aspectRatio) {
 	    };
     }
 
-    video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".mp4\" type=\"video/mp4\" />";
-    video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".webm\" type=\"video/webm\" />";
-    video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".ogg\" type=\"video/ogg\" />";
-    video.innerHTML += "Your browser does not support the <code>video</code> element.";
+    // video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".mp4\" type=\"video/mp4\" />";
+    // video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".webm\" type=\"video/webm\" />";
+    // video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".ogg\" type=\"video/ogg\" />";
+    // video.innerHTML += "Your browser does not support the <code>video</code> element.";
 }
 
 function positionCreativeElements() {
