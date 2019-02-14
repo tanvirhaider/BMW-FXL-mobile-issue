@@ -1,0 +1,459 @@
+
+/* ------------------------------------------------------------ */
+/* -----> RESET.CSS INCLUDED HERE TO REDUCE SERVER CALLS <----- */
+/* ------------------------------------------------------------ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, hgroup, menu, footer, header, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; } article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video { display: block; } a img {border: 0;}
+
+/* --------------------------------------------- */
+/* -----> FONT IMPORTS PER REFERENCE FILE <----- */
+/* --------------------------------------------- */
+@import url(https://fast.fonts.net/t/1.css?apiType=ad&projectid=21dfec3a-67e2-4918-9142-bfaf8a92f03f);
+  @font-face{font-family:"Proxima N W01 Reg";
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=aEQPPHegxpcMofj1Jp1tYXKqiOi9p687nKTqLsOq73tJQoR0ctMtTzsiZt8wVkyywZljis6XqhTOA87xBh2gII4u354RCpSLWvyOsTpDWSwYqZebhMSWmmB1fRC4gv4mw%2bgNckgkXbWXsUdbthhC8DaHdyfU7SRnJWmmYlaPg8E%3d);
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=aEQPPHegxpcMofj1Jp1tYXKqiOi9p687nKTqLsOq73tJQoR0ctMtTzsiZt8wVkyywZljis6XqhTOA87xBh2gII4u354RCpSLWvyOsTpDWSwYqZebhMSWmmB1fRC4gv4mw%2bgNckgkXbWXsUdbthhC8DaHdyfU7SRnJWmmYlaPg8E%3d#iefix) format("eot"),url(https://apiadn.fonts.com/v2/fonts/subset?x=bnlTGL%2flyERMvMB5KGT1XBXveOQr4%2f%2bsI8BXrDMbjKe%2fF%2fL%2bj0ydN4duUIuaJlKXIIeTW0CRI%2fxdcolu2oF2vGuxRdnwi3evMn0sJDUojwrNdOaEOnIGgnsirqykyQ5WF7nSFsayiEBjIUQedsS%2ftSfTxGgByozSb5GNszYPHG8%3d) format("woff2"),url(https://apiadn.fonts.com/v2/fonts/subset?x=7lOozVx17sBSzsSHZRAsBC1QzJejLKkoqlkZJJA7s5wDJrO6eUaNgLBUCc3UDRmiWlHxWEy%2bHKcjWobUn06eTgU7LoeE7jT8pPX35hzyd2hUVGY3c%2fV7UCJBagiDRKvps9xb6oxPVgoBNrCrFuuDCGuYWsPDI0cUA7DsHslAy6o%3d) format("woff"),url(https://apiadn.fonts.com/v2/fonts/subset?x=YdU1Gas3Kn1GLOFex%2fIYiPq%2fAYSzutipKMkVmBE2Aiv46sUG8HgSPatrkyifHCf7eJaVv1qkqX6BQCC8Sq3HcRN2tMuoqzgXV%2bBJ4wTSScRK9XVKhCeDCO2TGwwWiHBWJmJxF7X0timAIhkGq8v%2bDQvO02r3FUEnxmQpNDF0w%2fQ%3d) format("truetype")}
+  @font-face{font-family:"Proxima N W02 Bold";
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=3m9sZXQqzMRmVlycd6e8QzKwa6vl4y002J4aBR1aKDSyu2Ocz0RsIiawLUEx5xq56KII8cd2WTai5kabaKAkw7oG4uv9a6fJ1gv533XGp3H9kzQik0Je2ND%2fvD%2bZVkl6kETg4NsfrV4NHWrsLDP5hiiYHLMFm2k3GpQboFeQcmU%3d);
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=3m9sZXQqzMRmVlycd6e8QzKwa6vl4y002J4aBR1aKDSyu2Ocz0RsIiawLUEx5xq56KII8cd2WTai5kabaKAkw7oG4uv9a6fJ1gv533XGp3H9kzQik0Je2ND%2fvD%2bZVkl6kETg4NsfrV4NHWrsLDP5hiiYHLMFm2k3GpQboFeQcmU%3d#iefix) format("eot"),url(https://apiadn.fonts.com/v2/fonts/subset?x=1jA8a6kaT0NuM7%2bf3PrZlFxldvUathMnC%2f592lbImbxX%2bOOLy907FNTWTVYORp7aeZJX%2btakG%2f%2fq0iQx0DcUwTKZzUUBh4qngYv0%2fYfQFtZIqulpn%2bAo3nzeRj06oxR0Q%2fkhqK4Bf9x9V2Op18nDmDRhuvxT3Q1IZdk1FjfIpQk%3d) format("woff2"),url(https://apiadn.fonts.com/v2/fonts/subset?x=nzdUhcdHlj0pVBSBB89zTJ0%2fCPooMF5f5g8qZykOr91eS1u37i6ARGaTPm%2fj5Cq1AH6duCKKlhibgGZWaf3NzJ6jHFPFziUNo4fjXJqpJpRncwALwwvDbYPsJPEE9QGFigqBAmcOr8ev2E6jZZw7sIhuxg6xhyrf16kPX0b4jVY%3d) format("woff"),url(https://apiadn.fonts.com/v2/fonts/subset?x=KPD8T4ogq%2bRh4h2g11CLb%2b3Y%2fhJq8zFkyeIAzOe5sxmw1hm1gPgZXzeSGjeaBYPzKsAN4x9wHKYrI1EARYHn7zFO1EMrgMI%2fgV0BmmzJWxR2ILwhNs1lt%2b2Oyh1tFejS8rPCR5IjRxz8MOrmgtX3MV%2bK1RsAj0G3VrVZ2BEh9As%3d) format("truetype")}
+  @font-face{font-family:"Proxima N W02 Smbd";
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=wt0z0ND%2fdjdWsmIUOO6vXq1qtPwCMYyUOGnyXvVBJ4eB%2f4iajAbNUvXJ13ifoOJCpMq28VCdpA1IcuurYjN5h9gemMTpvwhW8JlYNvNvdwyxpA1JJhvIgSEntpbeP9ydHsDLNL5lzqf5Wm3dURpTnx5ZFNVlS7%2bUCdOXz9WA84k%3d);
+  src:url(https://apiadn.fonts.com/v2/fonts/subset?x=wt0z0ND%2fdjdWsmIUOO6vXq1qtPwCMYyUOGnyXvVBJ4eB%2f4iajAbNUvXJ13ifoOJCpMq28VCdpA1IcuurYjN5h9gemMTpvwhW8JlYNvNvdwyxpA1JJhvIgSEntpbeP9ydHsDLNL5lzqf5Wm3dURpTnx5ZFNVlS7%2bUCdOXz9WA84k%3d#iefix) format("eot"),url(https://apiadn.fonts.com/v2/fonts/subset?x=u0tNb2sdJWaRi%2b4hqjxTTzB%2f8nmJQt%2fEcqOKtiV67VzasOTDgXCQ28zU9bRO5OVdCaAk7C5I8f7deeHeQaJVF%2fiWMjvuE%2bKVdtojR4VDuYjlNLbN3In%2beBBhYbXSyKtrOmnyG6lk2KMvgTYJ24bq1WHVqYmVb7FoOeD7I1LfGrw%3d) format("woff2"),url(https://apiadn.fonts.com/v2/fonts/subset?x=cXybx6EtjJgxMPFEs3rQmqRA6uTaSI2YrmI6040oS2qN3%2b6%2fhJvSMeO9IdbyhhWh5%2btjwBBYmxHZJCBx4ssg5FYCsr4WWtTWolGFbA6L%2fEqNXJrOnLSidhERjEKmkDvjHlA1Tx87zuqlLhgpEradmeTJ6bY0TXQ6IdTxR3vu6p4%3d) format("woff"),url(https://apiadn.fonts.com/v2/fonts/subset?x=PJsSGUv6%2fUtao1%2bt4ykLCOIhXuvQSsoAfnsxkh0ro3loHePTLvUYqPRKrFAo4DvV9MfRfkMbBmM4UVJ%2fGv8BmGAVOLM8GaKUG%2fKGKiKx5NzZItP1NM9na%2bxyBpSQlZl9LZ75ZLApPwXorbxxMQk6GOW%2fp3qGn6Nee0Cbu1kyhDg%3d) format("truetype")}
+
+	@font-face {
+    font-family: 'bmwtypewebli_all';
+    src: url('https://res.cloudinary.com/nyt-platforms/raw/upload/v1548954087/BMW/bmwtypewebli_all.woff');
+    font-weight: normal;
+    font-style: normal;
+}  
+	
+/* ------------------------------------------------------------------- */
+/* -----> BODY STYLE TO PREVENT FONT SCALLING ON MOBILE DEVICES <----- */
+/* ------------------------------------------------------------------- */
+body{
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: none;
+    zoom: 100%;
+}
+
+/* --------------------- */
+/* -----> GENERAL <----- */
+/* --------------------- */
+#adWrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#adContainer{
+    width: 100%;
+    height: 100%;
+    /*height: 0;
+    padding-top: calc(3 / 2 * 100%);*/
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #FFF;
+    cursor: pointer;
+    font-family: "bmwtypewebli_all";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+/* ------------------------------- */
+/* -----> MAIN CONTENT AREA <----- */
+/* ------------------------------- */
+#contentContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#mobileBgImg{
+    width: 100%;
+    /*max-width: 414px;*/
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /* background-size: 100%; */
+    background-size: cover;
+    /* background-position: top center; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#bgGrad{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    pointer-events: none;
+    display: none;
+
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
+}
+
+#mobileLogo{
+    position: absolute;
+    width: auto;
+    height: 50px;
+    max-width: 130px;
+    max-height: 50px;
+    display: none;
+	margin: 505px 0px 0px 20px;
+}
+#mobileLogo img{
+    width: auto;
+/*    height: 50px;*/
+    max-width: 175px;
+    max-height: 50px;
+}
+
+#mobileCopyContainer{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    right: 15px;
+}
+#mobileHeadlineCopy{
+    color: #FFF; /*placeholder*/
+    font-family: "bmwtypewebli_all";
+    font-size: 20px;
+    line-height: 20px;
+    display: none;
+}
+#mobileDescriptorCopy{
+    color: #FFF; /*placeholder*/
+    font-family: "bmwtypewebli_all";
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 4px;
+    display: none;
+}
+
+#mobileCta{
+    width: auto;
+    max-width: 158px;
+    height: 38px;
+    max-height: 38px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin: 0 15px 15px 0;
+    border: 1px solid #FFF;
+    background-color: rgba(0,0,0,0.5);
+    color: #FFF; /*placeholder*/
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: "bmwtypewebli_all";
+    display: none;
+
+    -webkit-transform: translateX(-9999px);
+    transform: translateX(-9999px);
+}
+#mobileCtaCopy{
+    padding: 0 14px 0 14px;
+}
+
+#mobile_disclaimer{
+    position: absolute;
+/*    bottom: -103px;*/
+    left: 0;
+    margin: 8px 0px;
+    width: 247px;
+    height: 11px;
+    background-image: url('images/disclaimer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* ----- > BORDERS <----- */
+.borderTop{
+	width: 100%;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.borderLeft{
+	width: 1px;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+.borderRight{
+	width: 1px;
+	height: 100%;
+	right: 0px;
+	top: 0px;
+}
+.borderBottom{
+	width: 100%;
+	height: 1px;
+	left: 0px;
+	bottom: 0px;
+}
+.contentBorder{
+	position: absolute;
+    z-index: 99999;
+    display: none;
+}
+
+/* -------------------------- */
+/* -----> VIDEO STYLES <----- */
+/* -------------------------- */
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    background-color: #000;
+    overflow: hidden;
+    opacity: 0;
+
+    -webkit-transform: translateX(-9999px);
+    transform: translateX(-9999px);
+}
+.centered {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+video{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.ios-center-video-controls video::-webkit-media-controls {
+    min-width: 0;
+}
+
+
+/* -----> VIDEO CONTROLS <----- */
+#videoControlsContainer{
+    width: 100%;
+    height: 100%;
+    /*height: 0;
+    padding-top: calc(3 / 2 * 100% + 40px);*/
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    pointer-events: none;
+}
+
+#playBtn, #pauseBtn, #muteBtn, #unmuteBtn{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    border: 1px solid #FFF;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    pointer-events: auto;
+
+    -webkit-transform: translateX(-9999px);
+    transform: translateX(-9999px);
+}
+#playBtn, #mute, #unmute{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#playBtnArrow{
+    width: 0;
+	height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -5px;
+	border-top: 8px solid transparent;
+	border-left: 14px solid #FFF;
+	border-bottom: 8px solid transparent;
+}
+
+#pauseBtn{
+    bottom: 18px;
+    left: 17px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+#pauseBtn.altPos{
+    left: 33px;
+}
+#pauseBtnLineLeft, #pauseBtnLineRight{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #FFF;
+}
+#pauseBtnLineLeft, #pauseBtnLineRight{
+    width: 6px;
+    height: 16px;
+    margin-top: -8px;
+}
+
+#pauseBtnLineLeft{
+    margin-left: -8px;
+}
+#pauseBtnLineRight{
+    margin-left: 2px;
+}
+
+#muteBtn, #unmuteBtn{
+    top: 22px;
+    left: 22px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+#muteBtn.altPos, #unmuteBtn.altPos{
+    left: 38px;
+}
+#mute, #unmute{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border: 1px solid #FFF;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px;
+}
+#mute{
+    background-image: url("../images/soundOff.png");
+}
+#unmute{
+    background-image: url("../images/soundOn.png");
+}
+
+
+/* -------------------- */
+/* -----> SHARED <----- */
+/* -------------------- */
+.genClk{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* ------------------------------- */
+/* -----> SHARED ANIMATIONS <----- */
+/* ------------------------------- */
+
+
+@-webkit-keyframes moveOnStageFadeIn{
+    0%{
+        opacity: 0;
+
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+    0.1%{
+        opacity: 0;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 1;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+@keyFrames moveOnStageFadeIn{
+    0%{
+        opacity: 0;
+
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+    0.1%{
+        opacity: 0;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 1;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes fadeOutMoveOffStage{
+    0%{
+        opacity: 1;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    99.9%{
+        opacity: 0;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 0;
+
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+}
+@keyFrames fadeOutMoveOffStage{
+    0%{
+        opacity: 1;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    99.9%{
+        opacity: 0;
+
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 0;
+
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+}
