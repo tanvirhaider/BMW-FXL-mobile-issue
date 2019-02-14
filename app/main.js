@@ -370,7 +370,7 @@ function setUpVideo(srcURL, aspectRatio) {
 	trackingObj.q3.tracked		 = false;
 	trackingObj.complete.tracked = false;
 
-	document.getElementById("video-container").innerHTML = "<video id=\"video\" webkit-playsinline playsinline" + ((setToAutoPlay === true) ? " autoplay muted" : "") + "></video>";
+	//document.getElementById("video-container").innerHTML = "<video id=\"video\" webkit-playsinline playsinline" + ((setToAutoPlay === true) ? " autoplay muted" : "") + "></video>";
 
 	video = document.getElementById("video");
 	videoTrackingModule = new EBG.VideoModule(video);

@@ -342,12 +342,6 @@ video {
   background-repeat: no-repeat;
   background-size: 13px; }
 
-#mute {
-  background-image: url("../images/soundOff.png"); }
-
-#unmute {
-  background-image: url("../images/soundOn.png"); }
-
 /* -------------------- */
 /* -----> SHARED <----- */
 /* -------------------- */
